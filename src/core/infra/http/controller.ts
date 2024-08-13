@@ -1,6 +1,6 @@
 import { HttpRequest } from "./http-request";
 import { HttpResponse } from "./http-response";
 
-export interface Controller<T> {
-  handle(request: HttpRequest<T>): HttpResponse<T>
+export interface Controller<T = any> {
+  handle(request: HttpRequest<T>): Promise<HttpResponse>
 }
