@@ -5,3 +5,8 @@ export const serverError = (error: Error): HttpResponse => ({
   statusCode: 400,
   body: new ServerError()
 })
+
+export const badRequest = (error: Error): HttpResponse => ({
+  statusCode: 400,
+  body: error
+})
